@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>回来吧李书成</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <style>
+        h1 {
+            font-weight: 500;
+            color: #4caf50;
+            margin-bottom: -16px;
+        }
+
+        h2 {
+            opacity: 0.8;
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-weight: 300;
+        }
+
+        a[href] {
+            color: #4caf50;
+            text-decoration: none;
+        }
+
+        a[href]:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        hr {
+            border: none;
+            border-top: black 1px solid;
+            opacity: 0.3;
+        }
+
+        html {
+            max-width: 800px;
+            margin: auto;
+            background: #fafafa;
+            font-family: Candara, Helvetica, Microsoft Yahei, sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html {
+                background: #1f1f1f;
+                color: #f0f0f0;
+            }
+
+            code {
+                background: #3c3c3c;
+            }
+
+            hr {
+                border-color: #fafafa;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 目标日期：2077年1月1日
+        const targetDate = new Date('2077-01-01T00:00:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeRemaining = targetDate - now;
+
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = `
+                距离回归还有：
+                ${days} 天 ${hours} 小时 ${minutes} 分钟 ${seconds} 秒
+            `;
+        }
+
+        // 每秒钟更新一次倒计时
+        setInterval(updateCountdown, 1000);
+    </script>
+    <h1 align="center">回来吧李书成</h1>
+    <div><img src="lsc.png" title="雅久森派（误）"></img></div>
+    <h2 align="center">😭回来吧李书成😭<br>
+    🌟我最骄傲的信仰🌟<br>
+    ⚡️历历在目的经历⚡️<br>
+    😭眼泪莫名在流淌😭<br>
+    💥依稀记得你模样💥<br>
+    👍还有给力的头脑👍<br>
+    ⚡️作业学校都狂抄⚡️<br>
+    ✨通宵游戏都不累✨<br>
+    </h2>
+    <h2 align="center"><div id="countdown"></div><h2>
+    <hr>
+    <h2 align="center">李书成总会迎来胜利</h2>
+    <center>2024</center>
+</body>
+
+</html>
